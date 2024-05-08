@@ -1,7 +1,10 @@
 <DOCTYPE! html>
 <html>
 <head>
-<title>Pyramid generator</title> 
+<title>Pyramid generator</title>
+<meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
 const character = "!";
