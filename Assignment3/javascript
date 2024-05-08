@@ -1,3 +1,9 @@
+<DOCTYPE! html>
+<html>
+<head>
+<title>Pyramid generator</title> 
+</head>
+<body>
 const character = "!";
 const count = 10;
 const rows = [];
@@ -22,3 +28,5 @@ for (const row of rows) {
 }
 
 console.log(result);
+</body>
+</html>
