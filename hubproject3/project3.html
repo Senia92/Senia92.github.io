@@ -1,35 +1,45 @@
-<DOCTYPE! html>
 <html>
-<head>
-<title>Pyramid generator</title>
-<meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-</head>
-<body>
-const character = "!";
-const count = 10;
-const rows = [];
-let inverted = false;
+    <head>
+        <script>
+            window.onload = function() {
+                const character = "¿";
+                const count = 10;
+                const rows = [];
+                let inverted = false;
 
-function padRow(rowNumber, rowCount) {
-  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
-}
+                function padRow(rowNumber, rowCount) {
+                  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+                }
 
-for (let i = 1; i <= count; i++) {
-  if (inverted) {
-    rows.unshift(padRow(i, count));
-  } else {
-    rows.push(padRow(i, count));
-  }
-}
+                for (let i = 1; i <= count; i++) {
+                  if (inverted) {
+                    rows.unshift(padRow(i, count));
+                  } else {
+                    rows.push(padRow(i, count));
+                  }
+                }
 
-let result = ""
+                let result = ""
 
-for (const row of rows) {
-  result = result + "\n" + row;
-}
+                for (const row of rows) {
+                  result = result + "\n" + row;
+                }
 
-console.log(result);
-</body>
+                //console.log(result);
+                var outputDiv = document.getElementById("array-output");
+                for (var i = 0; i < rows.length; i++) {
+                  outputDiv.innerHTML += rows[i] + "<br>";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>JavaScript Loop exercise</h1>
+        <h3>Andrea Calderon Roa</h3>
+        <pre>
+        <div id="array-output"></div>
+        </pre>
+
+    </body>
+
 </html>
